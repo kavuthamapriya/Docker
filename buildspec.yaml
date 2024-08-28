@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing dependencies...
+      - npm install
+  build:
+    commands:
+      - echo Build phase
+      - echo No build step needed for this Node.js app
+  post_build:
+    commands:
+      - echo Post-build phase
+      - echo Application build completed successfully
+
+artifacts:
+  files:
+    - '**/*'
+    - '!node_modules/**/*'
+    - '!*.md'
+  discard-paths: yes
+
